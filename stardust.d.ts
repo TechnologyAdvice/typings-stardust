@@ -221,7 +221,39 @@ declare module Stardust {
   // ======================================================
   // Collections
   // ======================================================
-  // TODO(zuko): Breadcrumb
+  // Breadcrumb
+  // ----------------------------------
+  interface BreadcrumbDividerProps extends GenericProps {
+    // --- Optional ---
+    children?: React.ReactNode,
+    icon?: React.ReactNode,
+  }
+  class BreadcrumbDivider extends React.Component<BreadcrumbDividerProps, void> {}
+
+  interface BreadcrumbSectionProps extends GenericProps {
+    // --- Optional ---
+    active?: boolean,
+    children?: React.ReactNode,
+    link?: boolean,
+    href?: string,
+    onClick?: (e: React.SyntheticEvent) => any,
+  }
+  class BreadcrumbSection extends React.Component<BreadcrumbSectionProps, void> {}
+
+  interface BreadcrumbProps extends GenericProps {
+    // --- Optional ---
+    children?: React.ReactNode,
+    // TODO(zuko): is this limited to a string, or can it be a ReactNode?
+    divider?: string,
+    icon?: React.ReactNode,
+    sections?: Array<any>,
+    // TODO(zuko): should not include 'medium'
+    size?: SemanticSize,
+  }
+  export class Breadcrumb extends React.Component<BreadcrumbProps, void> {
+    public static Divider: BreadcrumbDivider
+    public static Section: BreadcrumbSection
+  }
   // TODO(zuko): Form
   // TODO(zuko): Grid
   // TODO(zuko): Menu
