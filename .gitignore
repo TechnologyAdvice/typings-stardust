@@ -1,0 +1,4 @@
+*.log
+.DS_STORE
+typings
+node_modules
