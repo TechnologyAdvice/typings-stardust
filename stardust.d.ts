@@ -219,4 +219,4 @@ declare module Stardust {
   }
 }
 
-export = Stardust;
+export = Stardust
