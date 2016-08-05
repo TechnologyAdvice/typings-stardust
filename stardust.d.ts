@@ -217,6 +217,42 @@ declare module Stardust {
   export class Segment extends React.Component<SegmentProps, void> {
     public static Segments: Segments
   }
+
+  // ======================================================
+  // Collections
+  // ======================================================
+  // TODO(zuko): Breadcrumb
+  // TODO(zuko): Form
+  // TODO(zuko): Grid
+  // TODO(zuko): Menu
+  // TODO(zuko): Message
+  // TODO(zuko): Table
+
+  // ======================================================
+  // Modules
+  // ======================================================
+  // TODO(zuko): Accordion
+  // TODO(zuko): Checkbox
+  // TODO(zuko): Dropdown
+  // TODO(zuko): Modal
+  // TODO(zuko): Progress
+
+  // ======================================================
+  // Views
+  // ======================================================
+  // TODO(zuko): Item
+  // TODO(zuko): Statistic
+
+  // ======================================================
+  // Addons
+  // ======================================================
+  // NOTE(zuko): This category breaks alphabetical ordering because it relies
+  // on components defined in other categories
+  // ======================================================
+  // TODO(zuko): Confirm
+  // TODO(zuko): Radio
+  // TODO(zuko): Select
+  // TODO(zuko): Textarea
 }
 
 export = Stardust
