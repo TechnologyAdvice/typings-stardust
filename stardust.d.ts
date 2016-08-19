@@ -257,7 +257,68 @@ declare module Stardust {
   // TODO(zuko): Form
   // TODO(zuko): Grid
   // TODO(zuko): Menu
-  // TODO(zuko): Message
+  // Message
+  // ----------------------------------
+  interface MessageContentProps extends GenericProps {
+    // --- Optional ---
+    children?: React.ReactNode,
+    icon?: React.ReactNode,
+  }
+  class MessageContent extends React.Component<MessageContentProps, void> {}
+
+  interface MessageHeaderProps extends GenericProps {
+    // --- Optional ---
+    children?: React.ReactNode,
+    icon?: React.ReactNode,
+  }
+  class MessageHeader extends React.Component<MessageHeaderProps, void> {}
+
+  interface MessageItemProps extends GenericProps {
+    // --- Optional ---
+    children?: React.ReactNode,
+    icon?: React.ReactNode,
+  }
+  class MessageItem extends React.Component<MessageItemProps, void> {}
+
+  interface MessageListProps extends GenericProps {
+    // --- Optional ---
+    children?: React.ReactNode,
+    icon?: React.ReactNode,
+    items?: Array<string>,
+  }
+  class MessageList extends React.Component<MessageListProps, void> {}
+
+  interface MessageProps extends GenericProps {
+    // --- Optional ---
+    attached?: boolean | 'bottom',
+    children?: React.ReactNode,
+    className?: string,
+    color?: SemanticColor,
+    compact?: boolean,
+    content?: string,
+    floating?: boolean,
+    header?: React.ReactNode,
+    hidden?: boolean,
+    icon?: string | boolean,
+    list?: Array<string>
+    onDismiss?: (event: React.SyntheticEvent) => any,
+    // TODO(zuko): should not include 'medium'
+    size?: SemanticSize,
+    visible?: boolean,
+    // possible types
+    error?: boolean,
+    info?: boolean,
+    negative?: boolean,
+    positive?: boolean,
+    success?: boolean,
+    warning?: boolean,
+  }
+  export class Message extends React.Component<MessageProps, void> {
+    public static Content: MessageContent
+    public static Header: MessageHeader
+    public static Item: MessageItem
+    public static List: MessageList
+  }
   // TODO(zuko): Table
 
   // ======================================================
